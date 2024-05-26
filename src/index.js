@@ -1,11 +1,5 @@
-const http = require('http')
+const app = require('./server.js');
 
-const server = http.createServer(async (req,res) => {
-    if (req.method === 'GET' && req.url === '/') {
-        res.end()
-    }
-})
-
-server.listen(3001, () => {
-    console.log('server running on http://localhost:3001')
+app.listen('3005', () => {
+    console.log('listening on port 3005')
 })
